@@ -144,7 +144,7 @@ function getAverageRating(reviews) {
   return parseFloat((total / reviews.length).toFixed(1));
 }
 
-function handleSearch(e) {
+function handleSearch(e, data) {
   const query = e.target.value.toLowerCase();
   const filtered = appState
     .map((faculty) => {
