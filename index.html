@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="dist/css/main.css" />
   </head>
   <body>
+    <!-- Background Shapes -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
     <header>
       <h1>Guide</h1>
       <input
@@ -19,6 +24,39 @@
     <main>
       <section id="lecturerList"></section>
     </main>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Submit a Review</h2>
+        <form id="reviewForm">
+          <div class="form-group">
+            <label for="studentName">Your Name</label>
+            <input type="text" id="studentName" required placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="rating">Rating (1-5)</label>
+            <select id="rating" required>
+              <option value="">Select a rating</option>
+              <option value="5">5 - Excellent</option>
+              <option value="4">4 - Good</option>
+              <option value="3">3 - Average</option>
+              <option value="2">2 - Poor</option>
+              <option value="1">1 - Terrible</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="comment">Your Review</label>
+            <textarea id="comment" required placeholder="What did you think of the lecturer?"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-cancel" onclick="closeModal()">Cancel</button>
+            <button type="submit" class="btn-submit">Submit Review</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script src="js/app.js"></script>
   </body>
