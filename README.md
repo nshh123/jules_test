@@ -1,2 +1,2 @@
 # *Google_Jules Test*
-## I am actively testing Google's jules coding agent!
+## We are actively testing Google's jules coding agent!
